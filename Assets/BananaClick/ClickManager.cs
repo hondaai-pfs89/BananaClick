@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ClickManager : MonoBehaviour
 {
+   public AudioClip yellowBanana_SE;
+   public AudioClip greenBanana_SE;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -12,10 +14,20 @@ public class ClickManager : MonoBehaviour
 
             if (hit.collider != null)
             {
-                GetComponent<AudioSource>().Play();
-                //ヒットしたコライダーがついたオブジェクトを削除する
-                Destroy(hit.collider.gameObject);
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (hit.transform.CompareTag("greenBanana"))
+                {
+                    audioSource.clip = greenBanana_SE;
+                }
+                else
+                {
+                    audioSource.clip = yellowBanana_SE;
+                }
+                audioSource.Play();
+                hit.transform.localScale *= 1.2f;
+                Destroy(hit.transform.gameObject, 0.1f);
             }
-        }
+        
+        }  
     }
 }

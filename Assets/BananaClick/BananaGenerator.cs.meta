@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 83c0fa90c8118744c8787b4697bdb171
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - yellowBananaPrefab: {fileID: 5766979090781327072, guid: bb9539ae2ed392f4b8893f1320cf27a6, type: 3}
+  - greenBananaPrefab: {fileID: 5608177056478706484, guid: d2f4d08600fb275419577a43dd965fb2, type: 3}
+  - goldenBananaPrefab: {fileID: 8787990974331613184, guid: 9ea059e7044af5c47a1ed1cb4d4e3c72, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
