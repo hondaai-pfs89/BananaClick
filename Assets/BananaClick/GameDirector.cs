@@ -43,7 +43,7 @@ public class GameDirector : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
         this.timerText.GetComponent<TextMeshProUGUI>().text = timeLeft.ToString("F0");
-        this.scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score.ToString("D2");
+        this.scoreText.GetComponent<TextMeshProUGUI>().text = "スコア: " + score.ToString("D2");
 
         if (timeLeft < 0)
         {

@@ -6,14 +6,19 @@ public class ScoreSceneDirector : MonoBehaviour
 {
     [SerializeField]private TextMeshProUGUI finalScoreText;
 
-    public void Retry()
+    public void OnRetryButtonClicked()
     {
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void OnBackToTitleButtonClicked()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
     
     void Start()
     {
-        finalScoreText.text = "Score: " + GameDirector.finalScore.ToString("D2");
+        finalScoreText.text = "スコア: " + GameDirector.finalScore.ToString("D2");
     }
   
     // Update is called once per frame
